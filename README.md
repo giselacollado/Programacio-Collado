@@ -8,3 +8,4 @@ Modalitat - Tecnològic
 
 Presentació:
 M'agradaria acabar aquesta asignatura havent aprenent els fonament de la programació, el bàsic. UwU ;D :V 
+soy aaronius
