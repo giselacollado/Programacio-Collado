@@ -7,4 +7,4 @@ Classe - 1r A
 Modalitat - Tecnològic
 
 Presentació:
-M'agradaria acabar aquesta asignatura havent aprenent els fonament de la programació, el bàsic. UwU ;D :V 
+M'agradaria acabar aquesta asignatura havent aprenens els fonament de la programació, el bàsic. UwU ;D :V 

@@ -1,9 +1,10 @@
 print('Quin és el teu nom?\n')
 nom=input('')
-input('Hola',nom,'\n')
+print('Hola',nom, '\n')
 
 print('En quin any vas neixer?')
-años=2026-2010
+años=int(input(''))
+años=2026-años
 print('Tienes', años, 'años')
 
 variable1='57'
