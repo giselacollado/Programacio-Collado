@@ -1,16 +1,42 @@
 print('Quin és el teu primer número?')
-num1=int(input(''))
+n1=int(input(''))
 print('Quin és el teu segon número?')
-num2=int(input(''))
-print('La suma dels dos números és:', num1 + num2)
-print('La resta dels dos números és:', num1 - num2)
-print('o:', num2 -num1)
-print('La multiplicació dels dos números és:', num1 * num2)
-print('La divisió dels dos números és:', num1 / num2)
-print('o:', num2 / num1)
-print('la divisió entera dels dos números és:', num1 // num2)
-print('o:', num2//num1)
-print('La potència dels dos números és:', num1 ** num2)
-print('o:', num2**num1)
-print('El módul/residu de la divisió dels dos números és:', num1 % num2)
-print('o:', num2 % num1)
+n2=int(input(''))
+'''
+print('Suma:', n1 + n2)
+print('Resta:', n1 - n2)
+print('o:', n2 -n1)
+print('Multiplicació:', n1 * n2)
+print('Divisió:', n1 / n2)
+print('o:', n2 / n1)
+print('Divisió entera:', n1 // n2)
+print('o:', n2//n1)
+print('Potència:', n1 ** n2)
+print('o:', n2**n1)
+print('Mòdul/residu:', n1 % n2)
+print('o:', n2 % n1)
+
+#Textos
+t1=input('Escriu un text\n')
+t2=input('Escriu un altre text\n')
+print('\n\033[4mOPERACIONS AMB TEXTOS\033[0m\n')
+print('Concatenar:',t1+t2,'\n')
+print('Repetir:',t1*3,'\n')
+
+num=1
+num=2
+print(num)
+num=num+1
+print(num)
+num+=1
+print(num)
+'''
+#Intecanvi de variables
+print('La primera variable val:',n1,'\n')
+print('La segona variable val:',n2,'\n')
+aux=n1 #Variable auxiliar
+n1=n2
+n2=aux
+print('Ara la primera variable val:',n1,'\n')
+print('Ara la segona variable val:',n2,'\n')
+      
