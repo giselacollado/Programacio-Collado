@@ -2,7 +2,7 @@ print('Quin és el teu primer número?')
 n1=int(input(''))
 print('Quin és el teu segon número?')
 n2=int(input(''))
-'''
+
 print('Suma:', n1 + n2)
 print('Resta:', n1 - n2)
 print('o:', n2 -n1)
@@ -30,7 +30,7 @@ num=num+1
 print(num)
 num+=1
 print(num)
-'''
+
 #Intecanvi de variables
 print('La primera variable val:',n1,'\n')
 print('La segona variable val:',n2,'\n')
