@@ -1,23 +1,37 @@
-print('Quin és el teu primer número?')
+while true:
+    try:
+        numero=int(input('Introdueix un número: '))
+        
+    try:
+        print('Quin és el teu primer número?')
 n1=int(input(''))
+if n1=numero
 print('Quin és el teu segon número?')
 n2=int(input(''))
+break
 
-print ('Vols sumar-los, restar-los, multiplicar-los, dividir-los elevar-los, fer el módul o fer la divisió entera?')
+print ('Vols sumar, restar, multiplicar, dividir, elevar, fer el módul o fer la divisió entera?')
 operation=input('')
-if operation=='sumar-los':
-    print(n1+n2)
-elif operation=='restar-los':
-    print ('Escull n1-n2 o n2-n1')
-    if input('') == 'n1-n2':
-        print (n1-n2)
-    else:
-        print (n2-n1)
 
-elif operation=='multiplicar-los':
+if operation=='sumar':
+    print(n1+n2)
+
+elif operation == 'restar':
+    print('Quin ordre prefereixes?')
+    print('opció 1:', n1, '-', n2)
+    print('opció 2:', n2, '-', n1)
+    
+    opcion = int(input('Escriu 1 o 2: '))
+    
+    if opcion == 2:
+        print(n2 - n1)
+    else:
+        print(n1 - n2)
+
+elif operation=='multiplicar':
     print(n1*n2)
 
-elif operation == 'dividir-los':
+elif operation == 'dividir':
     if n2 == 0:
         print("Error: No es pot dividir entre zero.")
     else:
@@ -28,7 +42,7 @@ elif operation == 'dividir-los':
     else:
         print(n2 / n1)
 
-elif operation == 'elevar-los':
+elif operation == 'elevar':
     if n1 == 0 and n2 < 0:
         print("Error: No es pot elevar 0 a un exponent negatiu.")
     else:
@@ -40,12 +54,12 @@ elif operation == 'elevar-los':
         print(n2 ** n1)
 
 elif operation == 'fer el módul':
-    if n2 == 0:
+    if n1 == 0:
         print("Error: No es pot fer el módul amb zero.")
     else:
         print(n1 % n2)
         
-    if n1 == 0:
+    if n2 == 0:
         print("Error: No es pot fer el módul amb zero.")
     else:
         print(n2 % n1)
