@@ -1,14 +1,7 @@
-while true:
-    try:
-        numero=int(input('Introdueix un número: '))
-        
-    try:
-        print('Quin és el teu primer número?')
+print('Quin és el teu primer número?')
 n1=int(input(''))
-if n1=numero
 print('Quin és el teu segon número?')
 n2=int(input(''))
-break
 
 print ('Vols sumar, restar, multiplicar, dividir, elevar, fer el módul o fer la divisió entera?')
 operation=input('')
