@@ -5,19 +5,19 @@ n2=int(input(''))
 
 print ('Vols sumar-los, restar-los, multiplicar-los, dividir-los elevar-los, fer el módul o fer la divisió entera?')
 operation=input('')
-if operation=='sumar':
+if operation=='sumar-los':
     print(n1+n2)
-elif operation=='restar':
+elif operation=='restar-los':
     print ('Escull n1-n2 o n2-n1')
     if input('') == 'n1-n2':
         print (n1-n2)
-            else:input('n2-n1')
-                print (n2-n1)
+    else:
+        print (n2-n1)
 
-elif operation=='multiplicar':
+elif operation=='multiplicar-los':
     print(n1*n2)
 
-elif operation == 'dividir':
+elif operation == 'dividir-los':
     if n2 == 0:
         print("Error: No es pot dividir entre zero.")
     else:
@@ -28,7 +28,7 @@ elif operation == 'dividir':
     else:
         print(n2 / n1)
 
-elif operation == 'elevar':
+elif operation == 'elevar-los':
     if n1 == 0 and n2 < 0:
         print("Error: No es pot elevar 0 a un exponent negatiu.")
     else:
