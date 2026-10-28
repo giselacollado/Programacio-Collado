@@ -1,0 +1,62 @@
+print('Quin és el teu primer número?')
+n1=int(input(''))
+print('Quin és el teu segon número?')
+n2=int(input(''))
+
+print ('Vols sumar-los, restar-los, multiplicar-los, dividir-los elevar-los, fer el módul o fer la divisió entera?')
+operation=input('')
+if operation=='sumar':
+    print(n1+n2)
+elif operation=='restar':
+    print ('Escull n1-n2 o n2-n1')
+    if input('') == 'n1-n2':
+        print (n1-n2)
+            else:input('n2-n1')
+                print (n2-n1)
+
+elif operation=='multiplicar':
+    print(n1*n2)
+
+elif operation == 'dividir':
+    if n2 == 0:
+        print("Error: No es pot dividir entre zero.")
+    else:
+        print(n1 / n2)
+        
+    if n1 == 0:
+        print("Error: No es pot dividir entre zero.")
+    else:
+        print(n2 / n1)
+
+elif operation == 'elevar':
+    if n1 == 0 and n2 < 0:
+        print("Error: No es pot elevar 0 a un exponent negatiu.")
+    else:
+        print(n1 ** n2)
+        
+    if n2 == 0 and n1 < 0:
+        print("Error: No es pot elevar 0 a un exponent negatiu.")
+    else:
+        print(n2 ** n1)
+
+elif operation == 'fer el módul':
+    if n2 == 0:
+        print("Error: No es pot fer el módul amb zero.")
+    else:
+        print(n1 % n2)
+        
+    if n1 == 0:
+        print("Error: No es pot fer el módul amb zero.")
+    else:
+        print(n2 % n1)
+
+elif operation == 'fer la divisió entera':
+    if n2 == 0:
+        print("Error: No es pot fer la divisió entera entre zero.")
+    else:
+        print(n1 // n2)
+        
+    if n1 == 0:
+        print("Error: No es pot fer la divisió entera entre zero.")
+    else:
+        print(n2 // n1)    
