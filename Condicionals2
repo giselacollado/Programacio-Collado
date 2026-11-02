@@ -25,45 +25,73 @@ elif operation=='multiplicar':
     print(n1*n2)
 
 elif operation == 'dividir':
-    if n2 == 0:
-        print("Error: No es pot dividir entre zero.")
-    else:
-        print(n1 / n2)
-        
-    if n1 == 0:
-        print("Error: No es pot dividir entre zero.")
-    else:
-        print(n2 / n1)
+    print('Quin ordre prefereixes?')
+    print('opció 1:', n1, '/', n2)
+    print('opció 2:', n2, '/', n1)
+    
+    opcion = int(input('Escriu 1 o 2: '))
+    
+    if opcion == 2:
+        if n1 <= 0:
+            print('ERROR, no es pot dividir entre 0 ni nombres negatius')
+        else:
+            print(n2 / n1)
+    else:  
+        if n2 <= 0:
+            print('ERROR, no es pot dividir entre 0 ni nombres negatius')
+        else:
+            print(n1 / n2)
 
 elif operation == 'elevar':
-    if n1 == 0 and n2 < 0:
-        print("Error: No es pot elevar 0 a un exponent negatiu.")
+    print('Quin ordre prefereixes?')
+    print('opció 1:', n1, '**', n2)
+    print('opció 2:', n2, '**', n1)
+    
+    opcion = int(input('Escriu 1 o 2: '))
+    
+    if opcion == 2:
+        if n1 < 0 and n2 == 0:
+            print('ERROR, no es pot elevar 0 a un nombre negatiu')
+        else:
+            print(n2 ** n1)
     else:
-        print(n1 ** n2)
-        
-    if n2 == 0 and n1 < 0:
-        print("Error: No es pot elevar 0 a un exponent negatiu.")
-    else:
-        print(n2 ** n1)
+        if n2 < 0 and n1 == 0:
+            print('ERROR, no es pot elevar 0 a un nombre negatiu')
+        else:
+            print(n1 ** n2)
 
 elif operation == 'fer el módul':
-    if n1 == 0:
-        print("Error: No es pot fer el módul amb zero.")
+    print('Quin ordre prefereixes?')
+    print('opció 1:', n1, '%', n2)
+    print('opció 2:', n2, '%', n1)
+    
+    opcion = int(input('Escriu 1 o 2: '))
+    
+    if opcion == 2:
+        if n1 <= 0:
+            print('ERROR, no es pot fer el módul de 0 ni nombres negatius')
+        else:
+            print(n2 % n1)
     else:
-        print(n1 % n2)
-        
-    if n2 == 0:
-        print("Error: No es pot fer el módul amb zero.")
-    else:
-        print(n2 % n1)
+        if n2 <= 0:
+            print('ERROR, no es pot fer el módul de 0 ni nombres negatius')
+        else:
+            print(n1 % n2)
 
 elif operation == 'fer la divisió entera':
-    if n2 == 0:
-        print("Error: No es pot fer la divisió entera entre zero.")
+    print('Quin ordre prefereixes?')
+    print('opció 1:', n1, '//', n2)
+    print('opció 2:', n2, '//', n1)
+    
+    opcion = int(input('Escriu 1 o 2: '))
+    
+    if opcion == 2:
+        if n1 <= 0:
+            print('ERROR, no es pot fer la divisió entera entre 0 ni nombres negatius')
+        else:
+            print(n2 // n1)
     else:
-        print(n1 // n2)
-        
-    if n1 == 0:
-        print("Error: No es pot fer la divisió entera entre zero.")
-    else:
-        print(n2 // n1)    
+        if n2 <= 0:
+            print('ERROR, no es pot fer la divisió entera entre 0 ni nombres negatius')
+        else:
+            print(n1 // n2)
