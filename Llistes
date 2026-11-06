@@ -1,3 +1,4 @@
+'''
 #estructura per guardar més d'una variable relacionades
 llista = (2, 'Hola', 3.5)
 print(llista[0])
@@ -27,3 +28,14 @@ print(llista)
 #esborrar el contingut deixant la caixa
 llista[2]=''
 print(llista)
+'''
+#DNI
+dni=input('Escriu el teu DNI complet i sense espais\n')
+numero=int(dni[0:8]) % 23
+resta=numero % 23
+lletres=['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E']
+lletra_correcta=lletres[resta]
+if lletra_correcta == dni[8]:
+    print('El teu DNI és correcte')
+else:
+    print('El teu DNI no és correcte hauria de ser ' + lletra_correcta)
