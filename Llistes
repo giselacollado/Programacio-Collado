@@ -11,7 +11,7 @@ print(matriu[0])
 
 print(len(llista))
 print(len(matriu))
-
+'''
 llista=[2,3]+[4,6,9]
 print(llista)
 #parts d'una llista
@@ -39,3 +39,12 @@ if lletra_correcta == dni[8]:
     print('El teu DNI és correcte')
 else:
     print('El teu DNI no és correcte hauria de ser ' + lletra_correcta)
+'''
+#fució append
+print ('Lallista és:', llista)
+llista.append('gat')
+print (llista)
+#fució insert
+print ('La llista és:', llista)
+llista.insert (1,'gos')
+print (llista)

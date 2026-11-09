@@ -1,0 +1,40 @@
+print ('Tria el primer número\n')
+n1=int(input())
+print ('Tria el segon número\n')
+n2=int(input())
+print ('Tria el tercer número\n')
+n3=int(input())
+print ('Tria el quart número\n')
+n4=int(input())
+llista=[]
+
+llista.append(n1)
+print("Afegim", n1, "a la llista:", llista)
+
+
+if n2 < llista[0]:
+    llista.insert(0, n2)
+else:
+    llista.append(n2)
+print("Afegim", n2, "a la llista:", llista)
+
+
+if n3 < llista[0]:
+    llista.insert(0, n3)
+elif n3 < llista[1]:
+    llista.insert(1, n3)
+else:
+    llista.append(n3)
+print("Afegim", n3, "a la llista:", llista)
+
+
+if n4 < llista[0]:
+    llista.insert(0, n4)
+elif n4 < llista[1]:
+    llista.insert(1, n4)
+elif n4 < llista[2]:
+    llista.insert(2, n4)
+else:
+    llista.append(n4)
+print("Afegim", n4, "a la llista:", llista)
+print ('La llista ordenada de manera ascendent és:', llista)
