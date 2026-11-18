@@ -1,0 +1,16 @@
+#Regles del joc i codi de colors
+import random
+llista=random.sample(range(1,7),4)
+numero_intents=10
+while True:
+    num=input('Escull una combinació de 4 números del 1 al 6, sense repetir cap número. Tindràs 10 intents per encertar la combinació secreta. Se t donarán pistes: ')
+    if(num==llista[:4]):
+        print('Has encertat la combinació secreta!')
+        break
+    elif(num!=llista[:4]):
+        print('No has encertat la combinació secreta. Prova de nou!')
+        numero_intents-=1
+        if numero_intents==0:
+            print('Game over. La combinació secreta era:', llista[:4])
+            break
+        print('Et queden', numero_intents, 'intents.')
