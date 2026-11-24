@@ -3,10 +3,11 @@ import random
 llista=random.sample(range(1,7),4)#random.sample: extraer una cantidad específica de elementos aleatorios y sin repetición (sin reemplazo) desde una secuencia o iterable, devolviendo el resultado en una nueva lista.
 numero_intents=10
 
+print('Escull una combinació de 4 números del 1 al 6, sense repetir. Tens 10 intents per encertar la combinació secreta.: ')
 while True:
     prova=[]
     for i in range (4):
-        n=input('Escull una combinació de 4 números del 1 al 6, sense repetir. Tens 10 intents per encertar la combinació secreta.: ')
+        n=int(input('Numero: '))
         prova.append(n)
 
     if(prova==llista[:4]):
@@ -16,20 +17,25 @@ while True:
         print('No has encertat la combinació secreta. Prova de nou!')
 
 #pistes
-for i in range(4):
-    if prova[i]==llista[i]:
-        print('Posció', i +1, '[$]')
-    else:
-        trobat = False
-        for j in range(4):
-            if prova[i]==llista[j]:
-                trobat = True
-        if trobat:
-            print('Posció', i +1, '[~]')
+    resum=[]
+    for i in range(4):
+        resum.append(prova[i])
+        if prova[i]==llista[i]:
+            resum.append('[$]')
         else:
-            print('Posció', i +1, '[X]')
-numero_intents-=1
-if numero_intents==0:
-    print('Game over! La combinació secreta era:', llista[:4])
-    
-print('Et queden', numero_intents, 'intents.')
+            trobat = False
+            for j in range(4):
+                if prova[i]==llista[j]:
+                    trobat = True
+            if trobat:
+                resum.append('[~]')
+            else:
+                resum.append('[X]')
+
+    print(resum[0], resum[1], resum[2], resum[3], resum[4], resum[5], resum[6], resum[7])
+
+    numero_intents-=1
+    if numero_intents==0:
+        print('Game over! La combinació secreta era:', llista[:4])
+        break
+    print('Et queden', numero_intents, 'intents.')
