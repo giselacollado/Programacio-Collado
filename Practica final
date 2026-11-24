@@ -3,39 +3,37 @@ import random
 llista=random.sample(range(1,7),4)#random.sample: extraer una cantidad específica de elementos aleatorios y sin repetición (sin reemplazo) desde una secuencia o iterable, devolviendo el resultado en una nueva lista.
 numero_intents=10
 
-print('Escull una combinació de 4 números del 1 al 6, sense repetir. Tens 10 intents per encertar la combinació secreta.: ')
+print('Escull una combinació de 4 números del 1 al 6, sense repetir cap.Se t donaran pistes de cada núemro on: [$]-> el número és a la posició correcta; [~]-> el número està en la combinació secreta però a una altra posició; [X]-> el número no està en la combinació secreta. Tens 10 intents per encertar la combinació secreta, ànims!: ')
 while True:
+    entrada=input ('Combinació: ')
     prova=[]
-    for i in range (4):
-        n=int(input('Numero: '))
-        prova.append(n)
+    if len(entrada)==4:
+        for i in range (4):
+            prova.append(int(entrada[i]))
 
     if(prova==llista[:4]):
         print('Has encertat la combinació secreta!')
         break #acaba el while pq si no seguiria hasta el infinito
     elif(prova!=llista[:4]):
-        print('No has encertat la combinació secreta. Prova de nou!')
-
-#pistes
-    resum=[]
-    for i in range(4):
-        resum.append(prova[i])
-        if prova[i]==llista[i]:
-            resum.append('[$]')
-        else:
-            trobat = False
-            for j in range(4):
-                if prova[i]==llista[j]:
-                    trobat = True
-            if trobat:
-                resum.append('[~]')
+        pistes=[]
+        for i in range(4):
+            pistes.append(prova[i])
+            if prova [i]== llista[i]:
+                pistes.append('[$]')
             else:
-                resum.append('[X]')
+                trobat = False
+                for j in range(4):
+                    if prova[i]==llista[j]:
+                        trobat = True
+                if trobat:
+                    pistes.append('[~]')
+                else:
+                    pistes.append('[X]')
 
-    print(resum[0], resum[1], resum[2], resum[3], resum[4], resum[5], resum[6], resum[7])
-
-    numero_intents-=1
-    if numero_intents==0:
-        print('Game over! La combinació secreta era:', llista[:4])
-        break
-    print('Et queden', numero_intents, 'intents.')
+        print(pistes[0], pistes[1], pistes[2], pistes[3], pistes[4], pistes[5], pistes[6], pistes[7])
+        print('No has encertat la combinació secreta. Prova de nou!')
+        numero_intents-=1
+        print('Intents restants:', numero_intents)
+        if numero_intents==0:
+            print('Game over! La combinació secreta era:', llista[:4])
+            break
